@@ -1,197 +1,160 @@
-// ===============================
-// PORTFOLIO INTERACTIVE EFFECTS
-// ===============================
-
-
-// Mouse Glow
+/* ================= MOUSE GLOW ================= */
 
 const mouseGlow = document.createElement("div");
 
+mouseGlow.className = "mouse-glow";
+
 mouseGlow.style.position = "fixed";
-mouseGlow.style.width = "250px";
-mouseGlow.style.height = "250px";
+mouseGlow.style.width = "240px";
+mouseGlow.style.height = "240px";
 mouseGlow.style.borderRadius = "50%";
 mouseGlow.style.pointerEvents = "none";
-
 mouseGlow.style.background =
-    "radial-gradient(circle, rgba(0,229,255,0.10), transparent 70%)";
-
-mouseGlow.style.transform =
-    "translate(-50%, -50%)";
-
+    "radial-gradient(circle, rgba(0,229,255,0.07), transparent 70%)";
+mouseGlow.style.transform = "translate(-50%, -50%)";
 mouseGlow.style.zIndex = "-1";
+mouseGlow.style.opacity = "0";
 
 document.body.appendChild(mouseGlow);
 
-
 document.addEventListener("mousemove", function (event) {
-
-    mouseGlow.style.left =
-        event.clientX + "px";
-
-    mouseGlow.style.top =
-        event.clientY + "px";
-
+    mouseGlow.style.left = event.clientX + "px";
+    mouseGlow.style.top = event.clientY + "px";
+    mouseGlow.style.opacity = "1";
 });
 
 
-// ===============================
-// SCROLL REVEAL
-// ===============================
+/* ================= REVEAL ANIMATION ================= */
 
-const revealElements =
-    document.querySelectorAll(
-        ".skill-card, .project-card, .about-story, .about-facts, .section-title, .section-text, .section-label"
-    );
+const revealElements = document.querySelectorAll(
+    ".about-card, .tech-card, .project-card, .facts-row, .approach-step"
+);
 
+const observer = new IntersectionObserver(
+    function (entries) {
 
-const observer =
-    new IntersectionObserver(
-        function (entries) {
+        entries.forEach(function (entry) {
 
-            entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
 
-                if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
 
-                    entry.target.classList.add("show");
+                observer.unobserve(entry.target);
 
-                }
+            }
 
-            });
+        });
 
-        },
-        {
-            threshold: 0.15
-        }
-    );
+    },
+    {
+        threshold: 0.12
+    }
+);
 
 
 revealElements.forEach(function (element) {
 
-    element.classList.add("reveal");
+    element.style.opacity = "0";
+    element.style.transform = "translateY(30px)";
+
+    element.style.transition =
+        "opacity 0.75s ease, transform 0.75s ease";
 
     observer.observe(element);
 
 });
 
 
-// ===============================
-// ACTIVE NAV
-// ===============================
+/* ================= NAVIGATION ================= */
 
-const sections =
-    document.querySelectorAll("section");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-const navLinks =
-    document.querySelectorAll(".nav-links a");
+function updateActiveNav() {
+
+    let currentSection = "";
+
+    sections.forEach(function (section) {
+
+        const sectionTop =
+            section.getBoundingClientRect().top + window.scrollY - 180;
+
+        const sectionBottom =
+            sectionTop + section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
+        ) {
+
+            currentSection = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(function (link) {
+
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+
+        if (href === "#" + currentSection) {
+            link.classList.add("active");
+        }
+
+    });
+
+}
 
 
 window.addEventListener(
     "scroll",
-    function () {
-
-        let currentSection = "";
-
-        sections.forEach(function (section) {
-
-            const sectionTop =
-                section.offsetTop - 200;
-
-            if (window.scrollY >= sectionTop) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navLinks.forEach(function (link) {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href")
-                ===
-                "#" + currentSection
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
+    updateActiveNav,
+    {
+        passive: true
     }
 );
 
+updateActiveNav();
 
-// ===============================
-// BUTTON CLICK EFFECT
-// ===============================
 
-const buttons =
-    document.querySelectorAll(
-        ".primary-btn, .secondary-btn"
-    );
+/* ================= BUTTON CLICK EFFECT ================= */
 
+const buttons = document.querySelectorAll(
+    ".btn, .project-btn, .contact-link"
+);
 
 buttons.forEach(function (button) {
 
-    button.addEventListener(
-        "click",
-        function () {
+    button.addEventListener("click", function () {
 
-            button.style.transform =
-                "scale(0.96)";
+        button.style.transform = "scale(0.97)";
 
-            setTimeout(
-                function () {
+        setTimeout(function () {
 
-                    button.style.transform = "";
+            button.style.transform = "";
 
-                },
-                120
-            );
+        }, 120);
 
-        }
-    );
+    });
 
 });
 
 
-// ===============================
-// CURRENT YEAR
-// ===============================
+/* ================= FOOTER YEAR ================= */
 
 const footerText =
     document.getElementById("footer-text");
-
 
 if (footerText) {
 
     const year =
         new Date().getFullYear();
 
-    footerText.innerHTML =
-        `© ${year} SANUSHIA
-        <br>
-        AI & DATA SCIENCE STUDENT
-        <br><br>
-        BUILT WITH CODE & CREATIVITY ✨`;
+    footerText.textContent =
+        `© ${year} SANUSHIA • AI & DATA SCIENCE • BUILT WITH CODE & CURIOSITY`;
 
 }
-
-
-// ===============================
-// CONSOLE
-// ===============================
-
-console.log(
-    "✨ Welcome to Sanushia's Portfolio!"
-);
-
-console.log(
-    "🚀 AI & Data Science Student | Creative Builder"
-);

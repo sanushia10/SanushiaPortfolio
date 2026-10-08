@@ -1,943 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="3rd Year Artificial Intelligence and Data Science Student Portfolio"
+    <title>Sanushia | AI & Data Science</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
     >
 
-    <title>AI & Data Science Portfolio</title>
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- BACKGROUND -->
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-
+    <!-- Background -->
     <div class="grid-overlay"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
 
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="nav-container">
 
-    <!-- NAVBAR -->
-    <header>
+            <a href="#home" class="nav-logo">
+                AI <span>&</span> DS
+            </a>
 
-        <nav>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-            <div class="logo">
-                SANUSHIA<span></span>
-            </div>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
+        </div>
     </header>
 
 
-    <!-- HERO -->
-    <section id="home" class="hero">
+    <!-- ================= HERO ================= -->
+    <main>
 
+        <section class="hero section" id="home">
 
-        <!-- LEFT SIDE -->
+            <div class="hero-content">
 
-        <div class="hero-content">
-
-            <p class="eyebrow">
-                👋 HELLO, I'M
-            </p>
-
-
-            <h1>
-                SANUSHIA
-            </h1>
-
-
-            <h2>
-                3RD YEAR
-                <span>AI & DATA SCIENCE</span>
-                STUDENT
-            </h2>
-
-
-            <p class="hero-description">
-
-                I'm a 3rd year Artificial Intelligence and Data Science
-                student passionate about Machine Learning, Data Science,
-                Web Development and building real-world solutions.
-
-            </p>
-
-
-            <div class="status-line">
-
-                <span class="status-dot"></span>
-
-                <span>
-                    LEARN • BUILD • CREATE
-                </span>
-
-            </div>
-
-
-            <!-- HERO BUTTONS -->
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#projects"
-                    class="primary-btn"
-                >
-                    VIEW MY WORK →
-                </a>
-
-
-                <a
-                    href="mailto:sanushia.sanu@gmail.com"
-                    class="secondary-btn"
-                >
-                    📩 EMAIL
-                </a>
-
-
-                <a
-                    href="https://github.com/sanushia10"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="secondary-btn"
-                >
-                    💻 GITHUB
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- =========================
-             FUTURISTIC AI CORE
-        ========================== -->
-
-        <div class="hero-visual">
-
-
-            <!-- ROTATING ORBITS -->
-
-            <div class="orbit orbit-1"></div>
-
-            <div class="orbit orbit-2"></div>
-
-
-            <!-- AI CORE -->
-
-            <div class="ai-core">
-
-                <div class="core-glow"></div>
-
-                <div class="core-content">
-
-                    <div class="core-symbol">
-                        &lt;/&gt;
-                    </div>
-
-                    <div class="core-label">
-                        BUILD • LEARN • CREATE
-                    </div>
-
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    3RD YEAR ARTIFICIAL INTELLIGENCE & DATA SCIENCE
                 </div>
 
-            </div>
+                <h1 class="hero-title">
+                    SANUSHIA<span>.</span>
+                </h1>
 
+                <h2 class="hero-subtitle">
+                    Building ideas with
+                    <span>AI, Data & Code.</span>
+                </h2>
 
-            <!-- FLOATING SKILLS -->
-
-            <div class="tech-float float-1">
-
-                <span>🤖</span>
-                AI / ML
-
-            </div>
-
-
-            <div class="tech-float float-2">
-
-                <span>🐍</span>
-                PYTHON
-
-            </div>
-
-
-            <div class="tech-float float-3">
-
-                <span>📊</span>
-                DATA
-
-            </div>
-
-
-            <div class="tech-float float-4">
-
-                <span>🌐</span>
-                WEB
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- SCROLL -->
-
-    <div class="scroll-indicator">
-
-        <span>
-            SCROLL TO EXPLORE
-        </span>
-
-        <div>
-            ↓
-        </div>
-
-    </div>
-
-
-    <!-- ABOUT -->
-
-    <section id="about" class="about-section">
-
-        <p class="section-label">
-            01 — BEYOND THE CODE
-        </p>
-
-
-        <div class="about-heading">
-
-            <h2>
-                I don't just
-                <span>learn.</span>
-
-                <br>
-
-                I build.
-            </h2>
-
-
-            <p>
-
-                A 3rd year AI & Data Science student
-                exploring technology through hands-on
-                projects and continuous learning.
-
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-
-            <!-- CARD 01 -->
-
-            <div class="about-card">
-
-                <div class="card-number">
-                    01
-                </div>
-
-                <h3>
-                    WHO I AM
-                </h3>
-
-                <p>
-
-                    I am an Artificial Intelligence and Data Science
-                    student interested in AI, Machine Learning,
-                    Data Science and modern web technologies.
-
+                <p class="hero-description">
+                    I am an Artificial Intelligence & Data Science student
+                    passionate about Artificial Intelligence, Machine Learning,
+                    Data Science, Computer Vision, Python, Web Development
+                    and UI/UX Design.
                 </p>
 
-            </div>
-
-
-            <!-- CARD 02 -->
-
-            <div class="about-card featured-about">
-
-                <div class="card-number">
-                    02
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    <span>LEARN</span>
+                    <span class="status-separator">•</span>
+                    <span>BUILD</span>
+                    <span class="status-separator">•</span>
+                    <span>CREATE</span>
                 </div>
 
-                <h3>
-                    WHAT I BUILD
-                </h3>
-
-                <p>
-
-                    I enjoy creating practical projects that combine
-                    AI and software development to solve real-world
-                    problems.
-
-                </p>
-
-
-                <div class="mini-tags">
-
-                    <span>AI</span>
-                    <span>ML</span>
-                    <span>DATA</span>
-                    <span>WEB</span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 03 -->
-
-            <div class="about-card">
-
-                <div class="card-number">
-                    03
-                </div>
-
-                <h3>
-                    HOW I WORK
-                </h3>
-
-                <p>
-
-                    Learn the concept → build the project →
-                    test it → improve it → repeat.
-
-                </p>
-
-                <p class="quote">
-
-                    “Ideas become valuable when you build them.”
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FACTS -->
-
-        <div class="facts-row">
-
-            <div class="fact-item">
-                <strong>3RD</strong>
-                <small>YEAR</small>
-            </div>
-
-            <div class="fact-item">
-                <strong>AI</strong>
-                <small>INTEREST</small>
-            </div>
-
-            <div class="fact-item">
-                <strong>ML</strong>
-                <small>FOCUS</small>
-            </div>
-
-            <div class="fact-item">
-                <strong>∞</strong>
-                <small>IDEAS</small>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- TECHNICAL STACK -->
-
-    <section id="skills" class="skills-section">
-
-        <p class="section-label">
-            02 — TECHNICAL STACK
-        </p>
-
-
-        <h2 class="section-title">
-
-            Technologies I
-            <span>work with.</span>
-
-        </h2>
-
-
-        <p class="section-subtitle">
-
-            A growing technical toolkit developed through
-            coursework, projects and hands-on practice.
-
-        </p>
-
-
-        <!-- PROGRAMMING -->
-
-        <div class="stack-category">
-
-            <div class="category-title">
-
-                <span class="category-icon">
-                    &lt;/&gt;
-                </span>
-
-                <div>
-
-                    <h3>
-                        Programming
-                    </h3>
-
-                    <p>
-                        Core programming languages
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🐍
-                    </span>
-
-                    <div>
-
-                        <strong>Python</strong>
-                        <small>Programming</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        ☕
-                    </span>
-
-                    <div>
-
-                        <strong>Java</strong>
-                        <small>Programming</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🧩
-                    </span>
-
-                    <div>
-
-                        <strong>C</strong>
-                        <small>Programming</small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- AI & ML -->
-
-        <div class="stack-category">
-
-            <div class="category-title">
-
-                <span class="category-icon">
-                    AI
-                </span>
-
-                <div>
-
-                    <h3>
-                        AI & Machine Learning
-                    </h3>
-
-                    <p>
-                        Intelligent systems and model development
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🤖
-                    </span>
-
-                    <div>
-
-                        <strong>Machine Learning</strong>
-                        <small>ML Concepts</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🧠
-                    </span>
-
-                    <div>
-
-                        <strong>Deep Learning</strong>
-                        <small>Neural Networks</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        👁️
-                    </span>
-
-                    <div>
-
-                        <strong>Computer Vision</strong>
-                        <small>Image AI</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🔢
-                    </span>
-
-                    <div>
-
-                        <strong>TensorFlow</strong>
-                        <small>AI Framework</small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- DATA SCIENCE -->
-
-        <div class="stack-category">
-
-            <div class="category-title">
-
-                <span class="category-icon">
-                    DATA
-                </span>
-
-                <div>
-
-                    <h3>
-                        Data Science
-                    </h3>
-
-                    <p>
-                        Data analysis and insights
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        📊
-                    </span>
-
-                    <div>
-
-                        <strong>Data Analysis</strong>
-                        <small>Analytics</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🧮
-                    </span>
-
-                    <div>
-
-                        <strong>NumPy</strong>
-                        <small>Numerical Computing</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🐼
-                    </span>
-
-                    <div>
-
-                        <strong>Pandas</strong>
-                        <small>Data Handling</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        📈
-                    </span>
-
-                    <div>
-
-                        <strong>Data Visualization</strong>
-                        <small>Charts & Insights</small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- WEB -->
-
-        <div class="stack-category">
-
-            <div class="category-title">
-
-                <span class="category-icon">
-                    WEB
-                </span>
-
-                <div>
-
-                    <h3>
-                        Web Development
-                    </h3>
-
-                    <p>
-                        Frontend and backend development
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🌐
-                    </span>
-
-                    <div>
-
-                        <strong>HTML</strong>
-                        <small>Structure</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🎨
-                    </span>
-
-                    <div>
-
-                        <strong>CSS</strong>
-                        <small>Styling</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        ⚡
-                    </span>
-
-                    <div>
-
-                        <strong>JavaScript</strong>
-                        <small>Interaction</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🔥
-                    </span>
-
-                    <div>
-
-                        <strong>Flask</strong>
-                        <small>Python Web</small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- TOOLS -->
-
-        <div class="stack-category">
-
-            <div class="category-title">
-
-                <span class="category-icon">
-                    TOOL
-                </span>
-
-                <div>
-
-                    <h3>
-                        Tools & Platforms
-                    </h3>
-
-                    <p>
-                        Development workflow
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🔗
-                    </span>
-
-                    <div>
-
-                        <strong>Git</strong>
-                        <small>Version Control</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🐙
-                    </span>
-
-                    <div>
-
-                        <strong>GitHub</strong>
-                        <small>Repositories</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        💻
-                    </span>
-
-                    <div>
-
-                        <strong>VS Code</strong>
-                        <small>Development</small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="tech-card">
-
-                    <span class="tech-icon">
-                        🗄️
-                    </span>
-
-                    <div>
-
-                        <strong>MongoDB</strong>
-                        <small>Database</small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects" class="projects-section">
-
-        <p class="section-label">
-            03 — PROJECTS
-        </p>
-
-
-        <h2 class="section-title">
-
-            Things I've
-            <span>built.</span>
-
-        </h2>
-
-
-        <div class="projects-container">
-
-
-            <!-- PROJECT 1 -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        PROJECT 01
-                    </span>
-
-                    <span class="project-icon">
-                        ♻️
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Waste Segregation System
-                </h3>
-
-
-                <p>
-
-                    Real-time waste classification using CNN
-                    and Transfer Learning to identify different
-                    waste categories.
-
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>Python</span>
-                    <span>TensorFlow</span>
-                    <span>CNN</span>
-                    <span>Flask</span>
-
-                </div>
-
-
-                <div class="project-links">
-
-                    <a
-                        href="#"
-                        class="project-btn"
-                    >
-                        LIVE DEMO ↗
+                <div class="hero-actions">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
+                    <a href="mailto:sanushia.sanu@gmail.com" class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email
+                    </a>
+
+                    <a href="https://github.com/sanushia10" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+
+                    <a href="resume.pdf" download class="btn btn-secondary">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+
+                <div class="ai-core">
+
+                    <div class="core-glow"></div>
+
+                    <div class="core-content">
+                        <div class="core-symbol">&lt;/&gt;</div>
+                        <div class="core-label">
+                            BUILD • LEARN • CREATE
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tech-float float-1">
+                    <i class="fa-solid fa-brain"></i>
+                    AI / ML
+                </div>
+
+                <div class="tech-float float-2">
+                    <i class="fa-brands fa-python"></i>
+                    PYTHON
+                </div>
+
+                <div class="tech-float float-3">
+                    <i class="fa-solid fa-chart-line"></i>
+                    DATA
+                </div>
+
+                <div class="tech-float float-4">
+                    <i class="fa-solid fa-globe"></i>
+                    WEB
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="section about-section" id="about">
+
+            <div class="section-heading">
+                <span class="section-number">01</span>
+
+                <div>
+                    <p class="section-kicker">BEYOND THE CODE</p>
+                    <h2>I don't just learn.<br><span>I build.</span></h2>
+                </div>
+            </div>
+
+
+            <div class="about-grid">
+
+                <article class="about-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+
+                    <h3>Who I Am</h3>
+
+                    <p>
+                        A 3rd Year Artificial Intelligence & Data Science
+                        student who enjoys learning through projects,
+                        experimentation and problem solving.
+                    </p>
+                </article>
+
+
+                <article class="about-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+
+                    <h3>What I Build</h3>
+
+                    <p>
+                        AI projects, data-driven applications, computer
+                        vision solutions, web applications and creative
+                        digital experiences.
+                    </p>
+                </article>
+
+
+                <article class="about-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <h3>How I Work</h3>
+
+                    <p>
+                        Think, explore, learn, build, test and improve.
+                        Every project is an opportunity to understand
+                        something new.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <div class="facts-row">
+
+                <div class="fact">
+                    <span class="fact-value">03</span>
+                    <span class="fact-label">YEAR</span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-value">AI</span>
+                    <span class="fact-label">FOCUS</span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-value">ML</span>
+                    <span class="fact-label">BUILDING</span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-value">∞</span>
+                    <span class="fact-label">LEARNING</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPROACH ================= -->
+        <section class="section approach-section">
+
+            <div class="section-heading">
+                <span class="section-number">02</span>
+
+                <div>
+                    <p class="section-kicker">MY APPROACH</p>
+                    <h2>Think. Build.<br><span>Improve.</span></h2>
+                </div>
+            </div>
+
+            <div class="approach-box">
+
+                <div class="approach-step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <span>01</span>
+                    <h3>Learn</h3>
+                    <p>Explore new concepts and technologies.</p>
+                </div>
+
+
+                <div class="approach-line"></div>
+
+
+                <div class="approach-step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <span>02</span>
+                    <h3>Understand</h3>
+                    <p>Break down the problem and find the why.</p>
+                </div>
+
+
+                <div class="approach-line"></div>
+
+
+                <div class="approach-step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <span>03</span>
+                    <h3>Build</h3>
+                    <p>Turn ideas into practical solutions.</p>
+                </div>
+
+
+                <div class="approach-line"></div>
+
+
+                <div class="approach-step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <span>04</span>
+                    <h3>Test</h3>
+                    <p>Evaluate the result and learn from it.</p>
+                </div>
+
+
+                <div class="approach-line"></div>
+
+
+                <div class="approach-step">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <span>05</span>
+                    <h3>Improve</h3>
+                    <p>Refine the work and create something better.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+        <section class="section skills-section" id="skills">
+
+            <div class="section-heading">
+                <span class="section-number">03</span>
+
+                <div>
+                    <p class="section-kicker">TECHNICAL STACK</p>
+                    <h2>Tools behind<br><span>the ideas.</span></h2>
+                </div>
+            </div>
+
+
+            <div class="skills-grid">
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>01</span>
+                        <h3>AI & MACHINE LEARNING</h3>
+                    </div>
+
+                    <p>
+                        Artificial Intelligence, Machine Learning,
+                        Deep Learning, Computer Vision, CNN,
+                        Transfer Learning and TensorFlow.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>AI</span>
+                        <span>ML</span>
+                        <span>DL</span>
+                        <span>CV</span>
+                        <span>CNN</span>
+                        <span>TensorFlow</span>
+                    </div>
+
+                </article>
+
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>02</span>
+                        <h3>DATA SCIENCE</h3>
+                    </div>
+
+                    <p>
+                        Data analysis, preprocessing, cleaning,
+                        exploratory analysis and visualization
+                        using NumPy and Pandas.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>EDA</span>
+                        <span>Analysis</span>
+                        <span>Visualization</span>
+                    </div>
+
+                </article>
+
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>03</span>
+                        <h3>PROGRAMMING</h3>
+                    </div>
+
+                    <p>
+                        Programming with Python, Java and C,
+                        with a focus on problem solving and
+                        object-oriented programming.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C</span>
+                        <span>OOP</span>
+                        <span>Problem Solving</span>
+                    </div>
+
+                </article>
+
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>04</span>
+                        <h3>WEB DEVELOPMENT</h3>
+                    </div>
+
+                    <p>
+                        Building modern interfaces and web applications
+                        using HTML, CSS, JavaScript and Flask.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Flask</span>
+                    </div>
+
+                </article>
+
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>05</span>
+                        <h3>UI / UX</h3>
+                    </div>
+
+                    <p>
+                        Designing simple, modern and user-focused
+                        interfaces using Figma, wireframes and prototypes.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>Figma</span>
+                        <span>UI/UX</span>
+                        <span>Wireframing</span>
+                        <span>Prototyping</span>
+                    </div>
+
+                </article>
+
+
+                <article class="tech-card">
+
+                    <div class="tech-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <div class="tech-card-head">
+                        <span>06</span>
+                        <h3>TOOLS</h3>
+                    </div>
+
+                    <p>
+                        Tools and platforms used for development,
+                        version control, coding and application work.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+        <section class="section projects-section" id="projects">
+
+            <div class="section-heading">
+                <span class="section-number">04</span>
+
+                <div>
+                    <p class="section-kicker">SELECTED WORK</p>
+                    <h2>Ideas turned<br><span>into projects.</span></h2>
+                </div>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card featured-project">
+
+                    <div class="project-top">
+                        <div class="project-number">01</div>
+
+                        <div class="project-type">
+                            COMPUTER VISION
+                        </div>
+                    </div>
+
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+
+                    <h3>Waste Segregation System</h3>
+
+                    <p>
+                        A real-time waste classification system using
+                        CNN and Transfer Learning to identify different
+                        waste categories.
+                    </p>
+
+                    <div class="project-stack">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>CNN</span>
+                        <span>Flask</span>
+                    </div>
 
                     <a
                         href="https://github.com/sanushia10/WasteSegregation"
@@ -945,223 +565,273 @@
                         rel="noopener noreferrer"
                         class="project-btn"
                     >
-                        GITHUB ↗
+                        View Project
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- PROJECT 2 -->
+                <!-- Project 2 -->
+                <article class="project-card">
 
-            <article class="project-card">
+                    <div class="project-top">
+                        <div class="project-number">02</div>
 
-                <div class="project-top">
+                        <div class="project-type">
+                            AGRICULTURE + AI
+                        </div>
+                    </div>
 
-                    <span class="project-number">
-                        PROJECT 02
-                    </span>
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
 
-                    <span class="project-icon">
-                        🌾
-                    </span>
+                    <h3>Agri GradeX</h3>
 
-                </div>
+                    <p>
+                        An AI-powered crop grading concept designed
+                        to support efficient and consistent crop
+                        quality evaluation.
+                    </p>
 
+                    <div class="project-stack">
+                        <span>AI</span>
+                        <span>Computer Vision</span>
+                        <span>Agriculture</span>
+                    </div>
 
-                <h3>
-                    Agri GradeX
-                </h3>
+                    <a href="#contact" class="project-btn">
+                        Explore Concept
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
 
-
-                <p>
-
-                    AI-powered crop grading concept designed
-                    to support farmers in evaluating crop
-                    quality more efficiently.
-
-                </p>
-
-
-                <div class="project-tags">
-
-                    <span>AI</span>
-                    <span>Computer Vision</span>
-                    <span>Agriculture</span>
-
-                </div>
+                </article>
 
 
-                <div class="project-links">
+                <!-- Project 3 -->
+                <article class="project-card">
+
+                    <div class="project-top">
+                        <div class="project-number">03</div>
+
+                        <div class="project-type">
+                            UI / UX
+                        </div>
+                    </div>
+
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <h3>Smart Agriculture App</h3>
+
+                    <p>
+                        A smart farming interface focused on crop
+                        management, weather, reminders and
+                        farm activities.
+                    </p>
+
+                    <div class="project-stack">
+                        <span>Figma</span>
+                        <span>UI/UX</span>
+                        <span>Agriculture</span>
+                    </div>
+
+                    <a href="#contact" class="project-btn">
+                        Explore Concept
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Project 4 -->
+                <article class="project-card portfolio-project">
+
+                    <div class="project-top">
+                        <div class="project-number">04</div>
+
+                        <div class="project-type">
+                            PERSONAL
+                        </div>
+                    </div>
+
+                    <div class="project-icon-large">
+                        <i class="fa-solid fa-window-maximize"></i>
+                    </div>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A futuristic developer portfolio designed
+                        to showcase my projects, skills and learning journey.
+                    </p>
+
+                    <div class="project-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
 
                     <a
-                        href="#"
+                        href="https://sanushia10.github.io/SanushiaPortfolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="project-btn"
                     >
-                        VIEW PROJECT ↗
+                        Open Portfolio
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
+                </article>
 
-                    <a
-                        href="#"
-                        class="project-btn"
-                    >
-                        GITHUB ↗
-                    </a>
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section contact-section" id="contact">
+
+            <div class="contact-box">
+
+                <div class="contact-content">
+
+                    <p class="section-kicker">LET'S CONNECT</p>
+
+                    <h2>
+                        Have an idea?<br>
+                        <span>Let's build.</span>
+                    </h2>
+
+                    <p class="contact-description">
+                        I'm always interested in learning, building,
+                        experimenting and exploring new ideas.
+                    </p>
+
+                    <div class="contact-actions">
+
+                        <a
+                            href="mailto:sanushia.sanu@gmail.com"
+                            class="contact-link primary-contact"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>
+                                <small>Email</small>
+                                sanushia.sanu@gmail.com
+                            </span>
+                        </a>
+
+
+                        <a
+                            href="https://github.com/sanushia10"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-link"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            <span>
+                                <small>GitHub</small>
+                                github.com/sanushia10
+                            </span>
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/sanushia-l-7b3573351/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-link"
+                        >
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>
+                                <small>LinkedIn</small>
+                                Connect with me
+                            </span>
+                        </a>
+
+                    </div>
 
                 </div>
 
-            </article>
+                <div class="contact-visual">
 
+                    <div class="contact-ring ring-one"></div>
+                    <div class="contact-ring ring-two"></div>
 
-            <!-- PROJECT 3 -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        PROJECT 03
-                    </span>
-
-                    <span class="project-icon">
-                        🌱
-                    </span>
+                    <div class="contact-core">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
 
                 </div>
 
+            </div>
 
-                <h3>
-                    Smart Agriculture App
-                </h3>
+        </section>
 
-
-                <p>
-
-                    Smart agriculture management concept for
-                    crops, reminders, weather and farming activities.
-
-                </p>
+    </main>
 
 
-                <div class="project-tags">
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
 
-                    <span>Figma</span>
-                    <span>UI/UX</span>
-                    <span>Agriculture</span>
+        <div class="footer-line"></div>
 
-                </div>
+        <div class="footer-content">
 
+            <div>
+                <strong>AI & DS</strong>
+                <span>3RD YEAR • ARTIFICIAL INTELLIGENCE & DATA SCIENCE</span>
+            </div>
 
-                <div class="project-links">
+            <div class="footer-socials">
 
-                    <a
-                        href="#"
-                        class="project-btn"
-                    >
-                        VIEW PROJECT ↗
-                    </a>
+                <a
+                    href="https://sanushia10.github.io/SanushiaPortfolio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Portfolio"
+                >
+                    <i class="fa-solid fa-globe"></i>
+                </a>
 
+                <a
+                    href="https://github.com/sanushia10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-                    <a
-                        href="#"
-                        class="project-btn"
-                    >
-                        DESIGN ↗
-                    </a>
+                <a
+                    href="https://www.linkedin.com/in/sanushia-l-7b3573351/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
 
-                </div>
+                <a
+                    href="mailto:sanushia.sanu@gmail.com"
+                    aria-label="Email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-            </article>
+            </div>
 
         </div>
 
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="contact-section">
-
-        <p class="section-label">
-            04 — CONTACT
-        </p>
-
-
-        <h2 class="section-title">
-
-            Let's build something
-            <span>amazing.</span>
-
-        </h2>
-
-
-        <p class="section-text">
-
-            Interested in technology, projects and collaboration?
-            Let's connect and build something useful.
-
-        </p>
-
-
-        <div class="contact-buttons">
-
-            <a
-                href="mailto:sanushia.sanu@gmail.com"
-                class="primary-btn"
-            >
-                📩 EMAIL ME
-            </a>
-
-
-            <a
-                href="https://github.com/sanushia10"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="secondary-btn"
-            >
-                💻 GITHUB
-            </a>
-
-
-            <a
-                href="https://www.linkedin.com/in/sanushia-l-7b3573351/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="secondary-btn"
-            >
-                🔗 LINKEDIN
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p id="footer-text">
-
-            © 2026 SANUSHIA
-
-            <br>
-
-            3RD YEAR • AI & DATA SCIENCE
-
-            <br><br>
-
-            BUILT WITH CODE & CURIOSITY ✨
-
-        </p>
+        <p class="copyright" id="footer-text"></p>
 
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
