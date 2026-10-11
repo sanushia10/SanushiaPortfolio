@@ -1,160 +1,107 @@
-/* ================= MOUSE GLOW ================= */
 
-const mouseGlow = document.createElement("div");
+document.addEventListener("DOMContentLoaded", () => {
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
 
-mouseGlow.className = "mouse-glow";
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
 
-mouseGlow.style.position = "fixed";
-mouseGlow.style.width = "240px";
-mouseGlow.style.height = "240px";
-mouseGlow.style.borderRadius = "50%";
-mouseGlow.style.pointerEvents = "none";
-mouseGlow.style.background =
-    "radial-gradient(circle, rgba(0,229,255,0.07), transparent 70%)";
-mouseGlow.style.transform = "translate(-50%, -50%)";
-mouseGlow.style.zIndex = "-1";
-mouseGlow.style.opacity = "0";
-
-document.body.appendChild(mouseGlow);
-
-document.addEventListener("mousemove", function (event) {
-    mouseGlow.style.left = event.clientX + "px";
-    mouseGlow.style.top = event.clientY + "px";
-    mouseGlow.style.opacity = "1";
-});
-
-
-/* ================= REVEAL ANIMATION ================= */
-
-const revealElements = document.querySelectorAll(
-    ".about-card, .tech-card, .project-card, .facts-row, .approach-step"
-);
-
-const observer = new IntersectionObserver(
-    function (entries) {
-
-        entries.forEach(function (entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-
-                observer.unobserve(entry.target);
-
-            }
-
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
         });
 
-    },
-    {
-        threshold: 0.12
+        navItems.forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
     }
-);
 
+    // Automatically update the footer year
+    const yearElement = document.getElementById("year");
 
-revealElements.forEach(function (element) {
-
-    element.style.opacity = "0";
-    element.style.transform = "translateY(30px)";
-
-    element.style.transition =
-        "opacity 0.75s ease, transform 0.75s ease";
-
-    observer.observe(element);
-
-});
-
-
-/* ================= NAVIGATION ================= */
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-function updateActiveNav() {
-
-    let currentSection = "";
-
-    sections.forEach(function (section) {
-
-        const sectionTop =
-            section.getBoundingClientRect().top + window.scrollY - 180;
-
-        const sectionBottom =
-            sectionTop + section.offsetHeight;
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionBottom
-        ) {
-
-            currentSection = section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(function (link) {
-
-        link.classList.remove("active");
-
-        const href = link.getAttribute("href");
-
-        if (href === "#" + currentSection) {
-            link.classList.add("active");
-        }
-
-    });
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateActiveNav,
-    {
-        passive: true
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
-);
 
-updateActiveNav();
+    // Highlight the navigation link for the visible section
+    const sections = document.querySelectorAll("main section[id]");
 
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
 
-/* ================= BUTTON CLICK EFFECT ================= */
+                    const currentId = entry.target.id;
 
-const buttons = document.querySelectorAll(
-    ".btn, .project-btn, .contact-link"
-);
+                    navItems.forEach((link) => {
+                        const isActive =
+                            link.getAttribute("href") === `#${currentId}`;
 
-buttons.forEach(function (button) {
+                        link.classList.toggle("active", isActive);
+                    });
+                });
+            },
+            {
+                rootMargin: "-30% 0px -55% 0px",
+                threshold: 0
+            }
+        );
 
-    button.addEventListener("click", function () {
+        sections.forEach((section) => observer.observe(section));
+    }
 
-        button.style.transform = "scale(0.97)";
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href");
 
-        setTimeout(function () {
+            if (!targetId || targetId === "#") return;
 
-            button.style.transform = "";
+            const target = document.querySelector(targetId);
 
-        }, 120);
+            if (target) {
+                event.preventDefault();
 
+                target.scrollIntoView({
+                    behavior: window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches ? "auto" : "smooth",
+                    block: "start"
+                });
+            }
+        });
     });
 
+    // Small reveal effect for cards when they enter the screen
+    const cards = document.querySelectorAll(
+        ".glass-card, .mindset-card, .contact-card"
+    );
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            },
+            { threshold: 0.08 }
+        );
+
+        cards.forEach((card) => {
+            card.classList.add("reveal-ready");
+            revealObserver.observe(card);
+        });
+    }
 });
-
-
-/* ================= FOOTER YEAR ================= */
-
-const footerText =
-    document.getElementById("footer-text");
-
-if (footerText) {
-
-    const year =
-        new Date().getFullYear();
-
-    footerText.textContent =
-        `© ${year} SANUSHIA • AI & DATA SCIENCE • BUILT WITH CODE & CURIOSITY`;
-
-}
